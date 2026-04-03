@@ -4,8 +4,11 @@ Claude Code plugin marketplace for [GitCheck Agent Runner](https://github.com/Ro
 
 ## Install
 
-```bash
-claude /install-skill https://github.com/RoboNET/gitcheck-plugins
+In Claude Code:
+
+```
+/plugin marketplace add RoboNET/gitcheck-plugins
+/plugin install gitcheck-spec-pipeline@gitcheck
 ```
 
 ## Included plugins
