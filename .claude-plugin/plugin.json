@@ -1,0 +1,20 @@
+{
+  "name": "gitcheck-plugins",
+  "description": "GitCheck Agent Runner plugins: spec pipeline, test execution, code review",
+  "version": "0.1.0",
+  "author": {
+    "name": "Mikhail Korolev",
+    "email": "robonet@users.noreply.github.com"
+  },
+  "homepage": "https://github.com/RoboNET/gitcheck-plugins",
+  "repository": "https://github.com/RoboNET/gitcheck-plugins",
+  "license": "MIT",
+  "keywords": [
+    "gitcheck",
+    "agent-runner",
+    "spec",
+    "pipeline",
+    "testing",
+    "automation"
+  ]
+}

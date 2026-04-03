@@ -1,0 +1,49 @@
+name: gitcheck-spec-pipeline
+version: 0.1.0
+description: Advances spec pipeline steps on PR events for GitCheck Agent Runner
+
+events:
+  - type: pr.merged
+    labels: ["spec:requirements"]
+    action: "/spec next {FEATURE_ID}"
+
+  - type: pr.merged
+    labels: ["spec:architecture"]
+    action: "/spec next {FEATURE_ID}"
+
+  - type: pr.merged
+    labels: ["spec:test-cases"]
+    action: "/spec next {FEATURE_ID}"
+
+  - type: pr.merged
+    labels: ["spec:implementation"]
+    action: "/spec next {FEATURE_ID}"
+
+  - type: pr.merged
+    labels: ["spec:documentation"]
+    action: "/spec next {FEATURE_ID}"
+
+  - type: pr.merged
+    labels: ["spec:execution"]
+    action: "/spec next {FEATURE_ID}"
+
+  - type: pr.merged
+    labels: ["spec:feature"]
+    action: "/spec status {FEATURE_ID}"
+
+  - type: pr.review_submitted
+    labels: ["spec:*"]
+    verdict: changes_requested
+    action: "/spec inbox"
+
+  - type: pr.opened
+    labels: ["spec:*"]
+    action: "/spec status {FEATURE_ID}"
+
+requires:
+  tools: [gh, git]
+  env: [GITHUB_TOKEN]
+
+network:
+  - github.com
+  - api.github.com
