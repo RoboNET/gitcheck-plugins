@@ -41,10 +41,6 @@ events:
     verdict: approved
     action: "/spec next {FEATURE_ID}"
 
-  - type: pr.commented
-    labels: ["spec:*"]
-    action: "/spec inbox"
-
   - type: pr.opened
     labels: ["spec:*"]
     action: "/spec status {FEATURE_ID}"
