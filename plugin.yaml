@@ -49,6 +49,14 @@ events:
     labels: ["spec:*"]
     action: "/spec status {FEATURE_ID}"
 
+  - type: pr.commented
+    labels: ["spec:feature"]
+    action: "/spec next {FEATURE_ID}"
+
+  - type: pr.commented
+    labels: ["spec:requirements", "spec:architecture", "spec:test-cases", "spec:implementation", "spec:documentation", "spec:execution"]
+    action: "/spec inbox"
+
 requires:
   tools: [gh, git]
   env: [GITHUB_TOKEN]
