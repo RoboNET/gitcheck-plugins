@@ -51,7 +51,7 @@ events:
 
   - type: pr.commented
     labels: ["spec:requirements", "spec:architecture", "spec:test-cases", "spec:implementation", "spec:documentation", "spec:execution"]
-    action: "/spec next {FEATURE_ID}"
+    action: "/spec inbox"
 
 requires:
   tools: [gh, git]
